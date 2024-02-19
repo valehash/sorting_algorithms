@@ -9,14 +9,13 @@
  */
 int main(void)
 {
-    /*int array[] = {};
+    int array[] = {100,79,77,76,73,70,69,62,61,52,52,48,47,46,37,23,23,15,8,1};
     size_t n = sizeof(array) / sizeof(array[0]);
-	*/
 
-    /*print_array(array, n);*/
+    print_array(array, n);
     printf("\n");
-    bubble_sort(NULL, 0);
+    bubble_sort(array, n);
     printf("\n");
-    /*print_array(array, n);*/
+    print_array(array, n);
     return (0);
 }
