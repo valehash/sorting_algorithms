@@ -5,6 +5,34 @@
  */
 #include "sort.h"
 
+int _putchar(char c)
+{
+	return(write(1, &c, 1));
+}
+
+void num_printf(int value)
+{
+	int divisor = 1, inner_value = value, remainder = value;
+
+	while (inner_value >= 10)
+	{
+		divisor *= 10;
+		inner_value /= 10;
+	}
+
+	inner_value = value;
+	while (remainder != 0)
+	{
+		remainder = inner_value % divisor;
+		inner_value /= divisor;
+
+		_putchar(inner_value + '0');
+
+		inner_value = remainder;
+		divisor /= 10;
+	}
+}
+
 void bubble_sort(int *array, size_t size)
 {
 	size_t i;
@@ -32,9 +60,16 @@ void bubble_sort(int *array, size_t size)
 				for(k = 0; k < size; k++)
 				{
 					if (k == size -1)
-						printf("%d\n", array[k]);
+					{
+						num_printf(array[k]);
+						_putchar('\n');
+					}
 					else
-						printf("%d ,",array[k]);
+					{
+						num_printf(array[k]);
+						_putchar(',');
+						_putchar(' ');
+					}
 				}
 			}
 		}
