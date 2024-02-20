@@ -1,4 +1,5 @@
 #include "sort.h"
+
 /**
  * bubble_sort -function to sort an array using bubble sort
  * @array: the pointer to the array
@@ -26,11 +27,9 @@ void bubble_sort(int *array, size_t size)
 				array[i] = temp;
 				swapped = 1;
 				print_array(array, size);
-
 			}
 		}
 		if (swapped == 0)
 			break;
 	}
-
 }
