@@ -1,15 +1,18 @@
-/**
- * bubble_sort -nfunction to sort an array using bubble sort
- * @array: the pointer to the array
- * @size: the size of the array
- */
 #include "sort.h"
-
+/**
+ * _putchar - function to print a single character to stdout
+ * @c: the character to display
+ * returns: The character sent to stdout
+ */
 int _putchar(char c)
 {
 	return(write(1, &c, 1));
 }
 
+/**
+ * num_printf - function to print an integer value character by char
+ * @value: The value to print out 
+ */
 void num_printf(int value)
 {
 	int divisor = 1, inner_value = value, remainder = value;
@@ -21,7 +24,7 @@ void num_printf(int value)
 	}
 
 	inner_value = value;
-	while (remainder /= 0)
+	while (divisor != 0)
 	{
 		remainder = inner_value % divisor;
 		inner_value /= divisor;
@@ -33,6 +36,11 @@ void num_printf(int value)
 	}
 }
 
+/**
+ * bubble_sort -function to sort an array using bubble sort
+ * @array: the pointer to the array
+ * @size: the size of the array
+ */
 void bubble_sort(int *array, size_t size)
 {
 	size_t i;
