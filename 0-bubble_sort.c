@@ -21,7 +21,7 @@ void num_printf(int value)
 	}
 
 	inner_value = value;
-	while (remainder != 0)
+	while (remainder /= 0)
 	{
 		remainder = inner_value % divisor;
 		inner_value /= divisor;
