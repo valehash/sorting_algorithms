@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * bubble_sort -function to sort an array using bubble sort
+ * bubble_sort - function to sort an array using bubble sort
  * @array: the pointer to the array
  * @size: the size of the array
  */
