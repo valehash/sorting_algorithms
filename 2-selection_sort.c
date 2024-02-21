@@ -1,5 +1,4 @@
 #include "sort.h"
-
 /**
  * selection_sort - function to sort an array using bubble sort
  * @array: the pointer to the array
@@ -18,7 +17,7 @@ void selection_sort(int *array, size_t size)
 
 	length = size;
 
-	for (i = 0; i < length - 1; i++)
+	for (i = 0; i <= length - 1; i++)
 	{
 		min = i;
 		for(j = i + 1; j < length; j++)
@@ -29,10 +28,12 @@ void selection_sort(int *array, size_t size)
 				min = j;
 			}
 		}
-		temp =  array[i];
-		array[i] = array[min];
-		array[min] = temp;
-		
-		print_array(array, size);
+		if (array[i] > array[min])
+		{
+			temp =  array[i];
+			array[i] = array[min];
+			array[min] = temp;
+			print_array(array, size);
+		}
 	}
 }
